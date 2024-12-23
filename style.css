@@ -3,49 +3,61 @@ body {
   font-family: 'Inter', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  overflow-x: hidden;
+  text-align: center;
 }
 
 main {
+  font-size: 50px;
+  line-height: 1.4;
+  display: inline-block;
   text-align: left;
-  padding: 20px;
 }
 
 h1 {
   font-size: 68px;
-  line-height: 1.4; /* This controls the overall line spacing */
+  line-height: 1.4;
 }
 
 .light {
-  font-weight: 300; /* Light weight for less emphasis */
+  font-weight: 300; /* Light font for less emphasis */
 }
 
 .bold {
-  font-weight: 700; /* Bold weight for emphasis */
+  font-weight: 700; /* Bold font for emphasis */
 }
 
 .write-link {
   text-decoration: none;
-  font-size: 14px; /* Small font size for links */
-  color: #000;
-  border-bottom: 1px solid #000;
+  font-size: 14px;
+  color: #000000; /* Black text for links */
+  border-bottom: 1px solid #000000;
 }
 
 .highlight-link {
-  color: #000;
+  color: #000000;
   text-decoration: underline;
 }
 
 .small-text {
-  font-size: 14px; /* Matches "I write about it here." */
-  font-weight: 300; /* Light font for consistency */
-  margin-top: 4px; /* Adds custom spacing between lines */
-  display: inline-block; /* Ensures spacing applies correctly */
+  font-size: 14px; /* Matches other small text */
+  font-weight: 300;
+}
+
+/* Blur effect for hover */
+h1 span, h1 a {
+  display: inline-block;
+  padding: 3px;
+  filter: blur(3px); /* Default blur effect */
+  transition: filter 0.2s ease; /* Smooth transition on hover */
+}
+
+h1 span:hover, h1 a:hover {
+  filter: blur(0px); /* Remove blur on hover */
 }
